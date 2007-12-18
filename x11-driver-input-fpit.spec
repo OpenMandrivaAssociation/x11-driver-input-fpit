@@ -4,21 +4,19 @@ Release: %mkrel 5
 Summary: X.org input driver for Fujitsu Stylistic Tablet PCs
 Group: Development/X11
 URL: http://xorg.freedesktop.org
-
+# Note local tag xf86-input-fpit-1.1.0@mandriva suggested on upstream
+# Tag at git checkout 47ecabff271fc1b8dfcc40656934fb70264b7a0e
 ########################################################################
 # git clone git//git.mandriva.com/people/pcpa/xorg/drivers/xf86-input-fpit  xorg/drivers/xf86-input-fpit
 # cd xorg/drivers/xf86-input/fpit
-# git-archive --format=tar --prefix=xf86-input-fpit-1.1.0/ master | bzip2 -9 > xf86-input-fpit-1.1.0.tar.bz2
+# git-archive --format=tar --prefix=xf86-input-fpit-1.1.0/ xf86-input-fpit-1.1.0@mandriva | bzip2 -9 > xf86-input-fpit-1.1.0.tar.bz2
 ########################################################################
 Source0: xf86-input-fpit-%{version}.tar.bz2
-
 License: MIT
-
 ########################################################################
-# git-format-patch master..origin/mandriva+gpl
+# git-format-patch xf86-input-fpit-1.1.0@mandriva..origin/mandriva+gpl
 Patch1: 0001-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
 ########################################################################
-
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
