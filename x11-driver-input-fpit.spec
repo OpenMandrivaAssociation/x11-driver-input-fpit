@@ -16,12 +16,11 @@ URL: http://xorg.freedesktop.org
 Source0: xf86-input-fpit-%{version}.tar.bz2
 License: MIT
 ########################################################################
-# git-format-patch xf86-input-fpit-1.1.0@mandriva..origin/mandriva+gpl
+# git-format-patch xf86-input-fpit-1.1.0@mandriva..origin/mandriva+custom
 Patch1: 0001-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
+Patch2: 0002-Don-t-call-missing-symbol-xf86IsCorePointer.patch
 ########################################################################
 BuildRequires: x11-util-macros		>= 1.1.5-4mdk
-#BuildRequires: gcc			>= 4.2.2
-#BuildRequires: glibc-devel		>= 2.7
 BuildRequires: libpixman-1-devel	>= 0.9.6
 BuildRequires: x11-proto-devel		>= 7.3
 BuildRequires: x11-server-devel		>= 1.4
@@ -31,14 +30,12 @@ Conflicts: xorg-x11-server < 7.0
 X.org input driver for Fujitsu Stylistic Tablet PCs. This driver
 supports the touchscreen of the Stylistic LT and (with special
 options) of the Stylistic 500, 1000 and 2300.
-THIS DRIVER IS BROKEN:
-Missing symbols xf86IsCorePointer longer present due to X Input Hotplug rework,
-and RRGetRotation from previous X Randr version.
 
 %prep
 %setup -q -n xf86-input-fpit-%{version}
 
 %patch1 -p1
+%patch2 -p1
 
 %build
 autoreconf -ifs
