@@ -1,8 +1,6 @@
-%define debug_package	%{nil}
-
 Name: x11-driver-input-fpit
 Version: 1.1.0
-Release: %mkrel 5
+Release: %mkrel 6
 Summary: X.org input driver for Fujitsu Stylistic Tablet PCs
 Group: Development/X11
 URL: http://xorg.freedesktop.org
