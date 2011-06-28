@@ -1,7 +1,7 @@
-%define gitdate 20110609
+%define gitdate %nil
 
 Name: x11-driver-input-fpit
-Version: 1.3.99
+Version: 1.4.0
 Release: %mkrel 1%{?gitdate:.%{gitdate}}
 Summary: X.org input driver for Fujitsu Stylistic Tablet PCs
 Group: System/X11
@@ -47,6 +47,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc COPYING
+%{_datadir}/X11/xorg.conf.d/*conf
 %{_libdir}/xorg/modules/input/fpit_drv.la
 %{_libdir}/xorg/modules/input/fpit_drv.so
 %{_mandir}/man4/fpit.*
