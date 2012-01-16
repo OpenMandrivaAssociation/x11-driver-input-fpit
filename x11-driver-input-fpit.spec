@@ -40,6 +40,7 @@ autoreconf -v --install || exit 1
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+rm -f %{buildroot}%{_libdir}/xorg/modules/input/fpit_drv.la
 
 %clean
 rm -rf %{buildroot}
@@ -48,6 +49,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc COPYING
 %{_datadir}/X11/xorg.conf.d/*conf
-%{_libdir}/xorg/modules/input/fpit_drv.la
 %{_libdir}/xorg/modules/input/fpit_drv.so
 %{_mandir}/man4/fpit.*
