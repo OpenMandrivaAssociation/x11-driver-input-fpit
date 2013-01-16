@@ -1,0 +1,11 @@
+--- xf86-input-fpit-1.4.0/configure.ac.bero	2013-01-16 03:58:50.074717030 +0100
++++ xf86-input-fpit-1.4.0/configure.ac	2013-01-16 03:58:55.343656430 +0100
+@@ -27,7 +27,7 @@ AC_INIT([xf86-input-fpit],
+         xf86-input-fpit)
+ 
+ AC_CONFIG_SRCDIR([Makefile.am])
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ AC_CONFIG_AUX_DIR(.)
+ 
+ # Initialize Automake
