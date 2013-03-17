@@ -9,8 +9,8 @@ Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-fpit-
 Patch0:		fpit-automake-1.13.patch
 
 BuildRequires:	pkgconfig(xorg-macros)
-BuildRequires:	pkgconfig(xorg-proto)
 BuildRequires:	pkgconfig(xorg-server)
+BuildRequires:	pkgconfig(xproto)
 Requires:	x11-server-common %(xserver-sdk-abi-requires xinput)
 
 %description
