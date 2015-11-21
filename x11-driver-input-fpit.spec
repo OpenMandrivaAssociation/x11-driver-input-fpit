@@ -1,7 +1,7 @@
 Summary:	X.org input driver for Fujitsu Stylistic Tablet PCs
 Name:		x11-driver-input-fpit
 Version:	1.4.0
-Release:	17
+Release:	18
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
@@ -24,7 +24,7 @@ options) of the Stylistic 500, 1000 and 2300.
 
 %build
 autoreconf -v --install || exit 1
-%configure2_5x
+%configure
 %make
 
 %install
@@ -35,4 +35,3 @@ autoreconf -v --install || exit 1
 %{_datadir}/X11/xorg.conf.d/*conf
 %{_libdir}/xorg/modules/input/fpit_drv.so
 %{_mandir}/man4/fpit.*
-
