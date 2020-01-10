@@ -20,7 +20,7 @@ options) of the Stylistic 500, 1000 and 2300.
 
 %prep
 %setup -q -n xf86-input-fpit-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 autoreconf -v --install || exit 1
