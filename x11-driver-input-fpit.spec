@@ -4,7 +4,7 @@ Version:	1.4.0
 Release:	20
 Group:		System/X11
 License:	MIT
-Url:		http://xorg.freedesktop.org
+Url:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-fpit-%{version}.tar.bz2
 Patch0:		fpit-automake-1.13.patch
 
